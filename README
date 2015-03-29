@@ -1,2 +1,58 @@
 portable type definitions for a free-standing environment
 ---------------------------------------------------------
+
+COMPILERS
+---------
++ gcc (midipix).
++ gcc (mingw).
++ clang.
++ MSVS.
+
+
+USAGE
+-----
+
+(1) 32-bit free-standing environment
+------------------------------------
+
+#define __NT32
+#include <psxtypes/psxtypes.h>
+
+
+(2) 64-bit free-standing environment
+------------------------------------
+
+#define __NT64
+#include <psxtypes/psxtypes.h>
+
+
+(3) 32-bit free-standing WINAPI environment
+
+#define MIDIPIX_WIN32
+#include <psxtypes/psxtypes.h>
+
+
+(4) 64-bit free-standing WINAPI environment
+
+#define MIDIPIX_WIN64
+#include <psxtypes/psxtypes.h>
+
+
+(5) 32-bit WINAPI environment with a non-posix C library
+
+#define MIDIPIX_WIN32
+#define MIDIPIX_EXTERNAL_TYPES
+#include <psxtypes/psxtypes.h>
+
+
+(6) 64-bit WINAPI environment with a non-posix C library
+
+#define MIDIPIX_WIN64
+#define MIDIPIX_EXTERNAL_TYPES
+#include <psxtypes/psxtypes.h>
+
+
+(7) a standard POSIX development environment
+
+#define __NATIVE_POSIX
+#include <psxtypes/psxtypes.h>
