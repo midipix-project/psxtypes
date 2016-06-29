@@ -76,6 +76,7 @@
 #define __attr_export__			__declspec(dllexport)
 #define __attr_import__			__declspec(dllimport)
 #define __attr_naked__			__declspec(naked)
+#define __attr_weak__
 
 #ifdef __PE_VISIBILITY__
 #define __attr_hidden__ 		__attribute__((visibility("hidden")))

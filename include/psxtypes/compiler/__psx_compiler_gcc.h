@@ -57,6 +57,7 @@
 #define __attr_export__			__attribute__((dllexport))
 #define __attr_import__			__attribute__((dllimport))
 #define __attr_naked__
+#define __attr_weak__			__attribute__ ((weak))
 #define __attr_hidden__			__attribute__ ((visibility("hidden")))
 #define __attr_public__			__attribute__ ((visibility("default")))
 #define __attr_protected__		__attribute__ ((visibility("protected")))
