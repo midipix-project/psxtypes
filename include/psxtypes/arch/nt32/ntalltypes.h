@@ -176,3 +176,5 @@ typedef float			float_t;
 typedef double			double_t;
 #define __DEFINED_double_t
 #endif
+
+typedef __CUSTOM_OR_BUILTIN_va_list__ va_list;
