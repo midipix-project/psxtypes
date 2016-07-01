@@ -72,6 +72,7 @@
 #define __volatile__			volatile
 #define __attr_aligned__(x)		__declspec(align(x))
 #define __attr_ptr_size_aligned__	__attr_aligned__(__SIZEOF_POINTER__)
+#define __attr_section__(s)		__declspec(allocate(s))
 #define __attr_packed__
 #define __attr_export__			__declspec(dllexport)
 #define __attr_import__			__declspec(dllimport)
