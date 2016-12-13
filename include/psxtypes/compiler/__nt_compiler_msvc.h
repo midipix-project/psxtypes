@@ -16,6 +16,8 @@
 
 
 /* x86 processor model */
+#ifdef _M_IX86
+
 #if (_M_IX86 == 900)
 	#define __X86_MODEL 	986
 #elif (_M_IX86 == 800)
@@ -32,6 +34,7 @@
 	#define __X86_MODEL 	386
 #endif
 
+#endif
 
 /* x86_64 processor model */
 #if defined(_M_AMD64)
