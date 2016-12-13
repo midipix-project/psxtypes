@@ -1,6 +1,10 @@
 #ifndef _PSXTYPES_NT_COMPILER_MSVC_H_
 #define _PSXTYPES_NT_COMPILER_MSVC_H_
 
+/* sigh */
+#pragma warning ( disable : 4201 ) /* nameless struct member         */
+#pragma warning ( disable : 4706 ) /* assignment within conditional */
+#pragma warning ( disable : 4820 ) /* struct member padding        */
 
 /* compiler identification */
 #define __COMPILER__			__MSVC__
