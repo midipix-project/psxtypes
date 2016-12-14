@@ -2,6 +2,7 @@
 #define _PSXTYPES_NT_COMPILER_MSVC_H_
 
 /* sigh */
+#pragma warning ( disable : 4200 ) /* adjust to the 21st century      */
 #pragma warning ( disable : 4201 ) /* nameless struct member         */
 #pragma warning ( disable : 4706 ) /* assignment within conditional */
 #pragma warning ( disable : 4820 ) /* struct member padding        */
