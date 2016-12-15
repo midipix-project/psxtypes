@@ -2,8 +2,13 @@
 #define _PSXTYPES_NT_COMPILER_MSVC_H_
 
 /* sigh */
-#pragma warning ( disable : 4200 ) /* adjust to the 21st century      */
-#pragma warning ( disable : 4201 ) /* nameless struct member         */
+#pragma warning ( disable : 4054 ) /* cast funtion ptr to data ptr         */
+#pragma warning ( disable : 4055 ) /* cast data ptr to funtion ptr        */
+#pragma warning ( disable : 4127 ) /* constant expression comparisons    */
+#pragma warning ( disable : 4152 ) /* cast a function pointer to void   */
+#pragma warning ( disable : 4200 ) /* adjust to the 21st century       */
+#pragma warning ( disable : 4201 ) /* nameless struct member          */
+#pragma warning ( disable : 4702 ) /* unreachable code               */
 #pragma warning ( disable : 4706 ) /* assignment within conditional */
 #pragma warning ( disable : 4820 ) /* struct member padding        */
 
