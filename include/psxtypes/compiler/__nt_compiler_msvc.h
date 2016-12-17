@@ -2,6 +2,7 @@
 #define _PSXTYPES_NT_COMPILER_MSVC_H_
 
 /* sigh */
+#pragma warning ( disable : 4204 ) /* non-constant aggregate initializer    */
 #pragma warning ( disable : 4054 ) /* cast funtion ptr to data ptr         */
 #pragma warning ( disable : 4055 ) /* cast data ptr to funtion ptr        */
 #pragma warning ( disable : 4127 ) /* constant expression comparisons    */
