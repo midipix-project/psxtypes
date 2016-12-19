@@ -30,11 +30,6 @@
 	#define __X86_64_MODEL 	__amd64
 #endif
 
-
-/* va_list */
-#define __CUSTOM_OR_BUILTIN_va_list__  __builtin_va_list
-
-
 /* compiler keywords */
 #define __in
 #define __out
@@ -95,5 +90,13 @@
 #define CALLBACK
 #define NTAPI
 #define WINAPI
+
+/* vararg */
+typedef __builtin_va_list va_list;
+
+#define va_start(v,l)	__builtin_va_start(v,l)
+#define va_end(v)	__builtin_va_end(v)
+#define va_arg(v,l)	__builtin_va_arg(v,l)
+#define va_copy(d,s)	__builtin_va_copy(d,s)
 
 #endif /* _PSXTYPES_COMPILER_GCC_H_ */

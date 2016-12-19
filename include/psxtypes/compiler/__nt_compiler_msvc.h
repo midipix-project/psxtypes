@@ -53,11 +53,6 @@
 	#define __X86_64_MODEL 	__amd64
 #endif
 
-
-/* va_list */
-#define __CUSTOM_OR_BUILTIN_va_list__  char *
-
-
 /* compiler keywords */
 #define __in
 #define __out
@@ -126,5 +121,21 @@
 #define CALLBACK	__stdcall
 #define NTAPI		__stdcall
 #define WINAPI		__stdcall
+
+/* vararg */
+typedef char *          va_list;
+
+#if defined(__NT32)
+void     __cdecl        __va_start(char ** ,...);
+#define __va_size(l)    (((sizeof(void *)-1) + sizeof(l)) & ~(sizeof(void *)-1))
+#define va_start(v,l)	((void)(v = (char *)((&(l)) + __va_size(l))))
+#define va_end(v)	((void)(v = 0))
+#endif
+
+#if defined(__NT64)
+void     __cdecl        __va_start(char ** ,...);
+#define va_start(v,l)	((void)(__va_start(&v, l)))
+#define va_end(v)	((void)(v = 0))
+#endif
 
 #endif /* _PSXTYPES_NT_COMPILER_MSVC_H_ */
