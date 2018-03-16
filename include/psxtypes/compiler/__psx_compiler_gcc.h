@@ -58,6 +58,10 @@
 #define __attr_protected__		__attribute__ ((visibility("protected")))
 
 
+/* offsetof */
+#define __offsetof(st,member)		__builtin_offsetof(st,member)
+
+
 /* named section support */
 #define __attr_section__(s)		__attribute__((section(s)))
 #define __attr_section_decl__(s)

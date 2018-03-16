@@ -98,6 +98,10 @@
 #endif
 
 
+/* offsetof */
+#define __offsetof(st,member)		((size_t)((char *)&(((st *)0)->member) - (char *)0))
+
+
 /* named section support */
 #define __attr_section__(s)
 #define __attr_section_decl__(s)	__declspec(allocate(s))
